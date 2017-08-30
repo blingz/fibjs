@@ -152,7 +152,6 @@
     <ClInclude Include="include\RedisList.h" />
     <ClInclude Include="include\RedisSet.h" />
     <ClInclude Include="include\RedisSortedSet.h" />
-    <ClInclude Include="include\Regex.h" />
     <ClInclude Include="include\Routing.h" />
     <ClInclude Include="include\Runtime.h" />
     <ClInclude Include="include\SQLite.h" />
@@ -169,6 +168,7 @@
     <ClInclude Include="include\Stat.h" />
     <ClInclude Include="include\Stats.h" />
     <ClInclude Include="include\StringBuffer.h" />
+    <ClInclude Include="include\StringDecoder.h" />
     <ClInclude Include="include\SubProcess.h" />
     <ClInclude Include="include\TcpServer.h" />
     <ClInclude Include="include\TextColor.h" />
@@ -256,7 +256,6 @@
     <ClInclude Include="include\ifs\RedisList.h" />
     <ClInclude Include="include\ifs\RedisSet.h" />
     <ClInclude Include="include\ifs\RedisSortedSet.h" />
-    <ClInclude Include="include\ifs\Regex.h" />
     <ClInclude Include="include\ifs\Routing.h" />
     <ClInclude Include="include\ifs\SQLite.h" />
     <ClInclude Include="include\ifs\SandBox.h" />
@@ -271,6 +270,7 @@
     <ClInclude Include="include\ifs\Stat.h" />
     <ClInclude Include="include\ifs\Stats.h" />
     <ClInclude Include="include\ifs\Stream.h" />
+    <ClInclude Include="include\ifs\StringDecoder.h" />
     <ClInclude Include="include\ifs\SubProcess.h" />
     <ClInclude Include="include\ifs\TcpServer.h" />
     <ClInclude Include="include\ifs\TextColor.h" />
@@ -329,10 +329,11 @@
     <ClInclude Include="include\ifs\path_win32.h" />
     <ClInclude Include="include\ifs\process.h" />
     <ClInclude Include="include\ifs\profiler.h" />
+    <ClInclude Include="include\ifs\punycode.h" />
     <ClInclude Include="include\ifs\querystring.h" />
-    <ClInclude Include="include\ifs\re.h" />
     <ClInclude Include="include\ifs\registry.h" />
     <ClInclude Include="include\ifs\ssl.h" />
+    <ClInclude Include="include\ifs\string_decoder.h" />
     <ClInclude Include="include\ifs\test.h" />
     <ClInclude Include="include\ifs\timers.h" />
     <ClInclude Include="include\ifs\tty.h" />
@@ -482,6 +483,7 @@
     <ClCompile Include="src\net\Url.cpp" />
     <ClCompile Include="src\net\inetAddr.cpp" />
     <ClCompile Include="src\net\net.cpp" />
+    <ClCompile Include="src\net\punycode.cpp" />
     <ClCompile Include="src\os\Service_other.cpp" />
     <ClCompile Include="src\os\Service_win.cpp" />
     <ClCompile Include="src\os\os.cpp" />
@@ -492,7 +494,6 @@
     <ClCompile Include="src\os\os_win.cpp" />
     <ClCompile Include="src\os\registry.cpp" />
     <ClCompile Include="src\other\Image.cpp" />
-    <ClCompile Include="src\other\Regex.cpp" />
     <ClCompile Include="src\other\uuid.cpp" />
     <ClCompile Include="src\process\SubProcess.cpp" />
     <ClCompile Include="src\process\SubProcess_posix.cpp" />
@@ -517,6 +518,7 @@
     <ClCompile Include="src\ssl\SslServer.cpp" />
     <ClCompile Include="src\ssl\SslSocket.cpp" />
     <ClCompile Include="src\ssl\ssl.cpp" />
+    <ClCompile Include="src\string_decoder\StringDecoder.cpp" />
     <ClCompile Include="src\test\assert.cpp" />
     <ClCompile Include="src\test\test.cpp" />
     <ClCompile Include="src\util\LruCache.cpp" />
