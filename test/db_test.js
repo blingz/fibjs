@@ -91,13 +91,6 @@ describe("db", () => {
             assert.strictEqual(r['t3'].toString(), 'DDDDDDDDDD');
             assert.deepEqual(r['t4'], new Date('1998-04-14 12:12:12'));
 
-            assert.deepEqual(rs.fields, [
-                "t1",
-                "t2",
-                "t3",
-                "t4"
-            ]);
-
             assert.deepEqual(Object.keys(r), [
                 "t1",
                 "t2",
@@ -107,15 +100,18 @@ describe("db", () => {
 
             if (conn.type == 'SQLite') {
                 rs = conn.execute('select t1,t2,t3,t4 from test_null')[0];
-                assert.isUndefined(rs.t1);
-                assert.isUndefined(rs.t2);
-                assert.isUndefined(rs.t3);
-                assert.isUndefined(rs.t4);
+                assert.isNull(rs.t1);
+                assert.isNull(rs.t2);
+                assert.isNull(rs.t3);
+                assert.isNull(rs.t4);
             }
         });
 
         it("execute async", (done) => {
             conn.execute("select * from test where t1=?", 1123, (e, rs) => {
+                if (e)
+                    return done(e);
+
                 assert.equal(rs.length, 1);
                 done();
             });
